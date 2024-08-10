@@ -1,0 +1,96 @@
+@import "../../assets/scss/variables.scss";
+
+.customerinside-section {
+  min-height: 100vh;
+  font-family: $font-family;
+  .align-items-center {
+    align-items: center;
+  }
+  .text-end {
+    text-align: right;
+  }
+  .header-row {
+    padding: 0.8rem 1.2rem;
+    background: $primary-color;
+    color: $white-color;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .logo-left {
+      display: flex;
+      align-items: center;
+      text-transform: uppercase;
+      font-weight: 500;
+      img {
+        width: 26px;
+        margin-right: 8px;
+      }
+    }
+    .user-right {
+      display: flex;
+      align-items: center;
+      line-height: 1.1;
+      img {
+        width: 30px;
+        margin-right: 8px;
+      }
+      p {
+        margin-bottom: 0;
+        font-size: 14px;
+      }
+      span {
+        font-size: 11px;
+      }
+    }
+  }
+  .customerslist {
+    padding: 1.5rem;
+    h2{
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      display: flex;
+      align-items: center;
+      img {
+        width: 28px;
+        margin-right: 8px;
+      }
+    }
+  }
+  .customerslist-card {
+    background: $white-color;
+    border-radius: 5px;
+    padding: 1.2rem;
+    box-shadow: 2px 4px 10px rgba($primary-color, 0.1);
+    margin-bottom: 0.5rem;
+    position: relative;
+    .check-icon {
+      position: absolute;
+      width: 35px;
+      height: 35px;
+      right: 18px;
+      top: 50%;
+      transform: translateY(-50%);
+      img {
+        width: 35px;
+      }
+    }
+    &.current {
+      animation: infinite 0.5s shadowAnim;
+    }
+    label {
+      font-weight: 500;
+    }
+  }
+}
+
+@keyframes shadowAnim {
+  0% {
+    box-shadow: 2px 4px 15px rgba($secondary-color, 0.3);
+  }
+  50% {
+    box-shadow: 2px 0 15px rgba($secondary-color, 0.3);
+  }
+  100% {
+    box-shadow: 2px 4px 15px rgba($secondary-color, 0.3);
+  }
+}
